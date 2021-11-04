@@ -23,9 +23,8 @@ Server::~Server()
 
 void Server::newConnection()
 {
-    qDebug()<<"acıldı";
+    qDebug()<<"newConnection";
     QWebSocket *socket= server->nextPendingConnection();
 
     socket->sendTextMessage("piton client geldi");
-    //socket->close();
 }
